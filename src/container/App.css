@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+/*add this so that anya center styling gets applied with this*/
+.center {
+  display:flex;
+  justify-content: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
