@@ -8,6 +8,19 @@ import Tilt from 'react-parallax-tilt';
 import ParticlesBg from 'particles-bg';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      inuput: '',
+    }
+  }
+  /*We want to track the events*/
+  OnInputChange= (event) =>{
+    console.log(event.target.value);
+  }
+  onSubmit = () =>{
+    console.log("Click")
+  }
   render() {
     return (
       <div className="App">
@@ -15,7 +28,7 @@ class App extends Component {
       <Navigation/>
       <Logo/>
       <Rank/>
-      <ImageLinkForm/>
+      <ImageLinkForm OnInputChange={this.OnInputChange}/>
       
      {/* 
       <FaceRecognition/>*/}
